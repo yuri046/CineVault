@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function SearchBar({ onMovieSearch }) {
     const [searchTerm, setSearchTerm] = useState('');
-
+    
     const handleSearch = () => {
         axios({
             method: 'GET',

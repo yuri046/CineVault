@@ -12,9 +12,11 @@ export default function Card({ movies }) {
                             className={styles.poster}
                         />
                     )}
+                    <div className={styles.informacoes}>
                     <h2>{movie.title}</h2>
                     <p>{movie.release_date}</p>
                     <p>{movie.overview}</p>
+                    </div>
                 </div>
             ))}
         </div>
