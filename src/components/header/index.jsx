@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import SearchBar from '../searchBar'
+import { Link } from 'react-router-dom'
 
 export default function Header(){
     return (
@@ -7,8 +7,8 @@ export default function Header(){
         
         <h1>CineVault</h1>
         <nav className={styles.navbar}>
-            <a href="">Home</a>
-            <a href="">Favoritos</a>
+            <Link to='/'>Home</Link>
+            <Link to='favoritos'>Favoritos</Link>
         </nav>
         
     </div>

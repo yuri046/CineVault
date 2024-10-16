@@ -8,7 +8,7 @@ export default function SearchBar({ onMovieSearch }) {
     const handleSearch = () => {
         axios({
             method: 'GET',
-            url: 'https://api.themoviedb.org/3/search/movie',
+            url: 'https://api.themoviedb.org/3/search/multi',
             params: {
                 api_key: import.meta.env.VITE_TMDB_API_KEY,
                 query: searchTerm,

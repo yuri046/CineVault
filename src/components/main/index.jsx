@@ -4,16 +4,16 @@ import Card from '../movieCard'
 import { useState } from 'react';
 
 export default function Main() {
-    const [movies, setMovies] = useState([]); // Estado para armazenar a lista de filmes
+    const [movies, setMovies] = useState([]); 
 
     const handleMovieSearch = (searchedMovies) => {
-        setMovies(searchedMovies); // Atualiza o estado com a lista de filmes buscados
+        setMovies(searchedMovies); 
     };
 
     return (
         <div className={styles.main}>
-            <SearchBar onMovieSearch={handleMovieSearch} /> {/* Passa a função para SearchBar */}
-            <Card movies={movies} /> {/* Renderiza o Card com a lista de filmes */}
+            <SearchBar onMovieSearch={handleMovieSearch} /> 
+            <Card movies={movies} /> 
         </div>
     );
 }

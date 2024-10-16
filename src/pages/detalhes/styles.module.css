@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 50px 0 20px  0 ;
+    
+}
+
+.titulo{
+    font-size: clamp(20px, 8vw, 50px);
+    font-weight: 300;
+}
+
+.poster{
+    width: 100vw;
+    
+}
+   
+.date{
+    color: white;
+}
+
+.iconFavorito{
+    cursor: pointer;
+}
+
+.descricao{
+    padding: 10px;
+}
+
+@media(min-width:768px){
+    .poster{
+        width: 30vw;
+        height: auto;
+        
+    border-radius: 30px;
+    }
+    
+    .descricao{
+        width: 30vw;
+        font-size: 18px;
+    }
+}
