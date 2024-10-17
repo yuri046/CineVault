@@ -29,6 +29,10 @@
     padding: 10px;
 }
 
+.iconFavorito{
+    color: gold;
+}
+
 @media(min-width:768px){
     .poster{
         width: 30vw;

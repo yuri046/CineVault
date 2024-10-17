@@ -9,6 +9,11 @@ export default function Detalhes() {
   const { releaseDate, overview, imageUrl } = location.state || {};
   const [listaFavoritos, setListaFavoritos] = useState([])
   const [favorito, setFavorito] = useState({poster:'', })
+  const [icon, setIcon] = useState(false)
+
+
+
+
 
   const Favoritar = () => {
     const novoFavorito = { poster: imageUrl };
@@ -24,11 +29,17 @@ export default function Detalhes() {
       );
       setListaFavoritos(novaLista);
       localStorage.setItem('listaFavoritos', JSON.stringify(novaLista));
+
+      setIcon(!icon)
     } else {
       const novaLista = [...listaFavoritos, novoFavorito];
       setListaFavoritos(novaLista);
       localStorage.setItem('listaFavoritos', JSON.stringify(novaLista));
+
+      setIcon(!icon)
     }
+
+    
   
   };
   
@@ -58,7 +69,7 @@ export default function Detalhes() {
       {title && <h2 className={styles.titulo}>{title}</h2>}
       {imageUrl && <img className={styles.poster} src={imageUrl} alt={`Poster ${title}`} />}
       {releaseDate && <p className={styles.date}>Data de lançamento: {releaseDate}</p>}
-      <i onClick={Favoritar}  className={`fa fa-star ${styles.iconFavorito}`} style={{ fontSize: '30px' }}></i>
+      <i onClick={Favoritar}  className={`fa fa-star ${icon ? styles.iconFavorito : '' }`} style={{ fontSize: '30px' }}></i>
       <p className={styles.descricao}>{overview}</p>
     </div>
   );
