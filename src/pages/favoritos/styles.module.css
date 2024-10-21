@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.container img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.container img:hover{
+    border: 1px solid white;
+}
