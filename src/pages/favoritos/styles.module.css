@@ -14,3 +14,9 @@
 .container img:hover{
     border: 1px solid white;
 }
+
+@media(max-width:768px){
+    .container{
+        justify-content: center;
+    }
+}
